@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack serve --open --config webpack.config.js",
-    "build": "webpack build --output public"
+    "build": "webpack --config webpack.config.js"
   },
   "keywords": [],
   "author": "",
