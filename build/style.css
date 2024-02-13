@@ -980,6 +980,9 @@ input[type="checkbox"]:checked ~ label span svg{
 .mt-25{
   margin-top: 6.25rem;
 }
+.mt-4{
+  margin-top: 1rem;
+}
 .mb-15{
   margin-bottom: 3.75rem;
 }
@@ -1543,6 +1546,12 @@ input[type="checkbox"]:checked ~ label span svg{
 }
 .pb-15{
   padding-bottom: 3.75rem;
+}
+.pb-\[60px\]{
+  padding-bottom: 60px;
+}
+.pb-5{
+  padding-bottom: 1.25rem;
 }
 .pb-\[50px\]{
   padding-bottom: 50px;
@@ -2194,6 +2203,14 @@ input[type="checkbox"]:checked ~ label span svg{
     line-height: 2.25rem;
   }
 
+  .md\:text-\[24px\]{
+    font-size: 24px;
+  }
+
+  .md\:text-\[30px\]{
+    font-size: 30px;
+  }
+
   .md\:leading-tight{
     line-height: 1.25;
   }
@@ -2455,6 +2472,10 @@ input[type="checkbox"]:checked ~ label span svg{
 
   .lg\:pb-20{
     padding-bottom: 5rem;
+  }
+
+  .lg\:pb-\[30px\]{
+    padding-bottom: 30px;
   }
 
   .lg\:pt-\[180px\]{
