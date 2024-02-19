@@ -1046,6 +1046,9 @@ input[type="checkbox"]:checked ~ label span svg{
 .h-2{
   height: 0.5rem;
 }
+.h-auto{
+  height: auto;
+}
 .h-12\.5{
   height: 3.125rem;
 }
@@ -1547,8 +1550,8 @@ input[type="checkbox"]:checked ~ label span svg{
 .pb-15{
   padding-bottom: 3.75rem;
 }
-.pb-\[60px\]{
-  padding-bottom: 60px;
+.pb-\[20px\]{
+  padding-bottom: 20px;
 }
 .pb-5{
   padding-bottom: 1.25rem;
