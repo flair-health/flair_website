@@ -1046,9 +1046,6 @@ input[type="checkbox"]:checked ~ label span svg{
 .h-2{
   height: 0.5rem;
 }
-.h-auto{
-  height: auto;
-}
 .h-12\.5{
   height: 3.125rem;
 }
