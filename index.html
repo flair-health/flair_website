@@ -8,7 +8,7 @@
     <meta http-equiv='expires' content='0'> 
     <meta http-equiv='pragma' content='no-cache'>
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <title>Home – Flair Health</title>
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@latest/dist/alpine.min.js" defer></script>
   </head>
@@ -40,7 +40,7 @@
                     <a href="#services" class="menu-scroll text-base text-white group-hover:text-dark py-2 lg:py-6 lg:inline-flex lg:px-0 flex mx-8 lg:mr-0 lg:ml-8 xl:ml-12"> <b>For Clinics</b> </a>
                   </li>
                   <li class="relative group">
-                    <a href="about.html" class="menu-scroll text-base text-white group-hover:text-dark py-2 lg:py-6 lg:inline-flex lg:px-0 flex mx-8 lg:mr-0 lg:ml-8 xl:ml-12"> <b>About</b> </a>
+                    <a href="about.html" class="text-base text-white group-hover:text-dark py-2 lg:py-6 lg:inline-flex lg:px-0 flex mx-8 lg:mr-0 lg:ml-8 xl:ml-12"> <b>About</b> </a>
                   </li>
                 </ul>
               </nav>
@@ -649,12 +649,6 @@
           <div class="w-full md:w-1/2 lg:w-2/12 px-4">
             <div class="mb-10">
               <h3 class="font-semibold text-white text-xl mb-9"></h3>
-              <!-- <ul>
-                <li> <a href="javascript:void(0)" class="inline-block text-base text-white mb-3 hover:text-primary"> The Studio </a> </li>
-                <li> <a href="javascript:void(0)" class="inline-block text-base text-white mb-3 hover:text-primary"> Sponsoring </a> </li>
-                <li> <a href="javascript:void(0)" class="inline-block text-base text-white mb-3 hover:text-primary"> Newsletter </a> </li>
-                <li> <a href="javascript:void(0)" class="inline-block text-base text-white mb-3 hover:text-primary"> Contact Us </a></li>
-              </ul> -->
             </div>
           </div>
           <div class="w-full md:w-1/2 lg:w-3/12 px-4">
@@ -1298,7 +1292,7 @@
       pageLink.forEach((elem) => {
         elem.addEventListener("click", (e) => {
           e.preventDefault();
-          document.querySelector(elem.getAttribute("href")).scrollIntoView({
+          document.querySelector(elem.getAttribute("href")).onScroll({
             behavior: "smooth",
             offsetTop: 1 - 60,
           });
@@ -1306,23 +1300,23 @@
       });
 
       // section menu active
-      // function onScroll(event) {
-      //   const sections = document.querySelectorAll(".menu-scroll");
-      //   const scrollPos = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+      function onScroll(event) {
+        const sections = document.querySelectorAll(".menu-scroll");
+        const scrollPos = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
 
-      //   for (let i = 0; i < sections.length; i++) {
-      //     const currLink = sections[i];
-      //     const val = currLink.getAttribute("href");
-      //     const refElement = document.querySelector(val);
-      //     const scrollTopMinus = scrollPos + 73;
-      //     if (refElement.offsetTop <= scrollTopMinus && refElement.offsetTop + refElement.offsetHeight > scrollTopMinus) {
-      //       document.querySelector(".menu-scroll").classList.remove("active");
-      //       currLink.classList.add("active");
-      //     } else {
-      //       currLink.classList.remove("active");
-      //     }
-      //   }
-      // }
+        for (let i = 0; i < sections.length; i++) {
+          const currLink = sections[i];
+          const val = currLink.getAttribute("href");
+          const refElement = document.querySelector(val);
+          const scrollTopMinus = scrollPos + 73;
+          if (refElement.offsetTop <= scrollTopMinus && refElement.offsetTop + refElement.offsetHeight > scrollTopMinus) {
+            document.querySelector(".menu-scroll").classList.remove("active");
+            currLink.classList.add("active");
+          } else {
+            currLink.classList.remove("active");
+          }
+        }
+      }
       window.document.addEventListener("scroll", onScroll);
     </script>
 
